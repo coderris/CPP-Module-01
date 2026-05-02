@@ -5,28 +5,28 @@
 #                                                     +:+ +:+         +:+      #
 #    By: lanton-m <lanton-m@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/04/03 18:47:15 by lanton-m          #+#    #+#              #
-#    Updated: 2026/04/03 18:47:15 by lanton-m         ###   ########.fr        #
+#    Created: 2026/04/15 13:22:03 by lanton-m          #+#    #+#              #
+#    Updated: 2026/04/15 13:22:03 by lanton-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = executable
 CXX = c++
 FLAGS = -Werror -Wextra -Wall -std=c++98
+SRCS = main.cpp Harl.cpp
+HDRS = Harl.hpp
+OBJS = $(SRCS:.cpp=.o)
 
-SRCS = main.cpp
-OBJ = $(SRCS:.cpp=.o)
-
-%.o: %.cpp
+%.o: %.cpp $(HDRS)
 	$(CXX) $(FLAGS) -c $< -o $@
 
-$(NAME): $(OBJ)
-	$(CXX) $(FLAGS) $(OBJ) -o $(NAME)
+$(NAME): $(OBJS)
+	$(CXX) $(FLAGS) $(OBJS) -o $(NAME)
 
 all: $(NAME)
 
 clean:
-	rm -rf $(OBJ)
+	rm -rf $(OBJS)
 
 fclean: clean
 	rm -rf $(NAME)

@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex02
+NAME = executable
 CXX = c++
 FLAGS = -Werror -Wextra -Wall -std=c++98
 

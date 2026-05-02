@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex03
+NAME = executable
 CXX = c++
 FLAGS = -Werror -Wextra -Wall -std=c++98
 SRCS = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
