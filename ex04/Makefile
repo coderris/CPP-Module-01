@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: lanton-m <lanton-m@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/04/03 18:47:15 by lanton-m          #+#    #+#              #
-#    Updated: 2026/04/03 18:47:15 by lanton-m         ###   ########.fr        #
+#    Created: 2026/05/05 11:14:22 by lanton-m          #+#    #+#              #
+#    Updated: 2026/06/17 13:08:51 by lanton-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ $(NAME): $(OBJ)
 all: $(NAME)
 
 clean:
-	rm -rf $(OBJ)
+	rm -rf $(OBJ) *.replace
 
 fclean: clean
 	rm -rf $(NAME)
